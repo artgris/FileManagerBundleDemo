@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FileManagerBundle{% endblock %}
+
+{% block body %}
+    {{ form(form) }}
+{% endblock %}
+
+{% block tiny_javascripts %}
+
+    <script src="{{ asset('tinymce/js/tinymce4/tinymce.min.js') }}"></script>
+
+    <script>
+
+        function myFileBrowser(field_name, url, type, win) {
+
+            var cmsURL = "{{ path('file_manager', {module:'tiny', conf:'tiny'}) }}";
+            if (cmsURL.indexOf("?") < 0) {
+                cmsURL = cmsURL + "?type=" + type;
+            }
+            else {
+                cmsURL = cmsURL + "&type=" + type;
+            }
+
+            tinyMCE.activeEditor.windowManager.open({
+                file: cmsURL,
+                title: 'File Manager',
+                width: 1024,
+                height: 500
+            }, {
+                window: win,
+                input: field_name
+            });
+
+            return false;
+        }
+
+        tinymce.init({
+            selector: '.tinymce',
+            file_browser_callback: myFileBrowser,
+            height: 300,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table contextmenu paste code help wordcount'
+            ],
+            toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        });
+
+    </script>
+{% endblock %}
+
