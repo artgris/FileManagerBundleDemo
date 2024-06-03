@@ -24,4 +24,6 @@
 /assets/vendor/
 ###< symfony/asset-mapper ###
 
+/public/cache
+
 .idea
