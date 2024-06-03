@@ -1,56 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-bs-theme="dark">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{#    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.png') }}">#}
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}
-        {# Bootstrap #}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-              crossorigin="anonymous">
-        {# Font Awesome #}
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-              integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-              crossorigin="anonymous">
-    {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}FileManagerBundle{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {% block stylesheets %}{% endblock %}
 
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
 </head>
 <body>
-<div class="container">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading"><a href="{{ path('main') }}">FileManagerBundle</a></h1>
-            <p class="lead text-muted">A demo application to showcase FileManagerBundle features</p>
-            <p>
-                <a class="btn btn-primary" href="{{ path('file_manager', {'conf': 'default' }) }}"><i class="fas fa-tasks"></i> FileManager</a>
-                <a href="https://github.com/artgris/FileManagerBundle" target="_blank" class="btn btn-primary my-2"><i class="fab fa-github"></i> Github</a>
-                <a href="{{ path('tiny4') }}" class="btn btn-primary my-2"><i class="fas fa-teeth-open"></i> TinyMCE 4</a>
-            </p>
-        </div>
-    </section>
-    {% block body %}{% endblock %}
-</div>
-{% block javascripts %}
-    {# jQuery #}
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-    {#  Bootstrap #}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-            crossorigin="anonymous"></script>
-{% endblock %}
-{% block tiny_javascripts %}
-    <script src="{{ asset('tinymce/js/tinymce5/tinymce.min.js') }}"></script>
-    <script src="{{ asset('tinymce/js/tinymce5/plugins/media/plugin.min.js') }}"></script>
-    <script src="{{ asset('tinymce/js/tinymce5/plugins/image/plugin.min.js') }}"></script>
-{% endblock %}
+{% block body %}{% endblock %}
 </body>
 </html>

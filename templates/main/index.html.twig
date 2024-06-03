@@ -1,37 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FileManagerBundle{% endblock %}
-
 {% block body %}
-    <iframe width="100%" height="500" src="{{ path('file_manager', {'conf': 'default' }) }}" frameborder="0"></iframe>
-    <hr>
-    <iframe width="100%" height="500" src="{{ path('file_manager', {'conf': 'perso' }) }}" frameborder="0"></iframe>
-    <hr>
-    {{ form(form) }}
+    <main>
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+                <a href="{{ path('homepage') }}"
+                   class="d-flex align-items-center text-body-emphasis text-decoration-none">
+                    <i class="bi bi-list-columns-reverse me-2"></i>
+                    <span class="fs-4">FileManagerBundle</span>
+                </a>
+            </header>
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">FileManagerBundle</h1>
+                    <p class="col-md-8 fs-4">A demo application to showcase FileManagerBundle features</p>
+                    <a target="_blank" class="btn btn-primary btn-lg me-2"
+                       href="{{ path('file_manager', {'conf': 'default' }) }}"><i
+                                class="bi bi-list-columns-reverse me-2 my-2"></i>FileManager
+                    </a>
+                    <a href="https://github.com/artgris/FileManagerBundle" target="_blank"
+                       class="btn btn-primary btn-lg me-2 my-2"><i class="bi bi-github me-2"></i>Github</a>
+                </div>
+            </div>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-12 my-2">
+                    <iframe width="100%" height="500" src="{{ path('file_manager', {'conf': 'default' }) }}"></iframe>
+                </div>
+                <div class="col-md-12 my-2">
+                    <textarea name="" class="tinymce"></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
 {% endblock %}
 
-{% block tiny_javascripts %}
+{% block javascripts %}
     {{ parent() }}
-
+    <script src="{{ asset('tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
     <script>
-
         function myFileBrowser(callback, value, meta) {
-
-            var type = meta.filetype;
-            var cmsURL = "{{ path('file_manager', {module:'tiny', conf:'tiny'}) }}";
+            const type = meta.filetype;
+            let cmsURL = "{{ path('file_manager', {module:'tiny', conf:'default'}) }}";
             if (cmsURL.indexOf("?") < 0) {
                 cmsURL = cmsURL + "?type=" + type;
-            }
-            else {
+            } else {
                 cmsURL = cmsURL + "&type=" + type;
             }
-
-            var windowManagerCSS = '<style type="text/css">' +
+            const windowManagerCSS = '<style>' +
                 '.tox-dialog {max-width: 100%!important; width:97.5%!important; overflow: hidden; height:95%!important; border-radius:0.25em;}' +
                 '.tox-dialog__body { padding: 0!important; }' +
+                '.tox .tox-form__group{height:100%;}' +
                 '.tox-dialog__body-content > div { height: 100%; overflow:hidden}' +
                 '</style > ';
-
             window.tinymceCallBackURL = '';
             window.tinymceWindowManager = tinymce.activeEditor.windowManager;
             tinymceWindowManager.open({
@@ -40,12 +60,12 @@
                     type: 'panel',
                     items: [{
                         type: 'htmlpanel',
-                        html: windowManagerCSS + '<iframe src="' + cmsURL + '"  frameborder="0" style="width:100%; height:100%"></iframe>'
+                        html: windowManagerCSS + '<iframe src="' + cmsURL + '" style="width:100%; height:100%"></iframe>'
                     }]
                 },
                 buttons: [],
                 onClose: function () {
-                    if (tinymceCallBackURL != '')
+                    if (tinymceCallBackURL !== '')
                         callback(tinymceCallBackURL, {}); //to set selected file path
                 }
             });
@@ -53,16 +73,10 @@
 
         tinymce.init({
             selector: '.tinymce',
-            height: 300,
-            plugins: [
-                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
-                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-                'save table directionality emoticons template paste'
-            ],
-            toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons',
+            promotion: false,
+            plugins: 'image link',
+            toolbar: 'image link',
             file_picker_callback: myFileBrowser,
         });
-
     </script>
 {% endblock %}
-
