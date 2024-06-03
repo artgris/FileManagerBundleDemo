@@ -12,16 +12,11 @@ class MainController extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
-        return $this->render('main/index.html.twig');
-    }
-
-    #[Route('/media', name: 'media')]
-    public function media(): Response
-    {
         $form = $this->createForm(MediaType::class);
-        return $this->render('main/media.html.twig', [
+        return $this->render('main/index.html.twig', [
             'form' => $form->createView(),
         ]);
     }
+
 
 }
