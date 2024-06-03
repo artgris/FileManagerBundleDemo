@@ -1,7 +1,4 @@
 {
-    "artgris/filemanager-bundle": {
-        "version": "2.10.5"
-    },
     "doctrine/doctrine-bundle": {
         "version": "2.12",
         "recipe": {
