@@ -39,4 +39,14 @@ return [
         'version' => '1.11.3',
         'type' => 'css',
     ],
+    'sortablejs' => [
+        'version' => '1.15.2',
+    ],
+    'cropperjs' => [
+        'version' => '1.6.2',
+    ],
+    'cropperjs/dist/cropper.min.css' => [
+        'version' => '1.6.2',
+        'type' => 'css',
+    ],
 ];

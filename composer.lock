@@ -4,8 +4,325 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43dfc8534d9b7cbde10bf6946cb9e32e",
+    "content-hash": "d19ac3e2784df745cb578a4bd8734f3d",
     "packages": [
+        {
+            "name": "arkounay/ux-collection",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Arkounay/ux-collection.git",
+                "reference": "5ece819f3033c2ef9e3f05ea757f4e1030987f93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Arkounay/ux-collection/zipball/5ece819f3033c2ef9e3f05ea757f4e1030987f93",
+                "reference": "5ece819f3033c2ef9e3f05ea757f4e1030987f93",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/flex": ">=1.3.1",
+                "symfony/form": ">=5.4.0",
+                "symfony/twig-bundle": ">=5.4.0"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^5.4|^6.0",
+                "symfony/webpack-encore-bundle": "^1.13"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Arkounay\\Bundle\\UxCollectionBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonin M",
+                    "email": "arkounay@gmail.com"
+                }
+            ],
+            "description": "Collection for Symfony forms",
+            "keywords": [
+                "symfony-ux"
+            ],
+            "support": {
+                "issues": "https://github.com/Arkounay/ux-collection/issues",
+                "source": "https://github.com/Arkounay/ux-collection/tree/4.0.0"
+            },
+            "time": "2024-03-01T08:52:35+00:00"
+        },
+        {
+            "name": "arkounay/ux-media",
+            "version": "4.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Arkounay/ux-media.git",
+                "reference": "90f7dd039118932030c7e153464d63043a8fd647"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Arkounay/ux-media/zipball/90f7dd039118932030c7e153464d63043a8fd647",
+                "reference": "90f7dd039118932030c7e153464d63043a8fd647",
+                "shasum": ""
+            },
+            "require": {
+                "arkounay/ux-collection": "^4.0.0",
+                "artgris/filemanager-bundle": "^2.10.0",
+                "gregwar/image": "2.*",
+                "php": ">=8.0",
+                "symfony/flex": ">=1.3.1",
+                "symfony/form": ">=5.4.0",
+                "symfony/twig-bundle": ">=5.4.0"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^6.0|^7.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Arkounay\\Bundle\\UxMediaBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonin M",
+                    "email": "arkounay@gmail.com"
+                }
+            ],
+            "description": "Async document upload form type using ArtgrisFileManager",
+            "keywords": [
+                "symfony-ux"
+            ],
+            "support": {
+                "issues": "https://github.com/Arkounay/ux-media/issues",
+                "source": "https://github.com/Arkounay/ux-media/tree/4.1.2"
+            },
+            "time": "2024-04-02T06:56:42+00:00"
+        },
+        {
+            "name": "artgris/filemanager-bundle",
+            "version": "2.10.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artgris/FileManagerBundle.git",
+                "reference": "c72fc9072995dfe40c7ce9f7e79ec9da0fe41e01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artgris/FileManagerBundle/zipball/c72fc9072995dfe40c7ce9f7e79ec9da0fe41e01",
+                "reference": "c72fc9072995dfe40c7ce9f7e79ec9da0fe41e01",
+                "shasum": ""
+            },
+            "require": {
+                "oomphinc/composer-installers-extender": "^2.0",
+                "php": ">=8.1",
+                "symfony/asset": "^6.0||^7.0",
+                "symfony/event-dispatcher": "^6.0||^7.0",
+                "symfony/expression-language": "^6.0||^7.0",
+                "symfony/flex": "^2.3",
+                "symfony/form": "^6.0||^7.0",
+                "symfony/framework-bundle": "^6.0||^7.0",
+                "symfony/mime": "^6.0||^7.0",
+                "symfony/string": "^6.0||^7.0",
+                "symfony/translation": "^6.0||^7.0",
+                "symfony/twig-bridge": "^6.0||^7.0",
+                "symfony/twig-bundle": "^6.0||^7.0",
+                "symfony/validator": "^6.0||^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "symfony/browser-kit": "^6.0||^7.0",
+                "symfony/css-selector": "^6.0||^7.0",
+                "symfony/phpunit-bridge": "^6.0||^7.0",
+                "symfony/templating": "^6.0||^7.0",
+                "symfony/var-dumper": "^6.0||^7.0",
+                "symfony/yaml": "^6.0||^7.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Artgris\\Bundle\\FileManagerBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arthur Gribet",
+                    "email": "a.gribet@gmail.com"
+                }
+            ],
+            "description": "FileManager is a simple Multilingual File Manager Bundle for Symfony",
+            "homepage": "https://github.com/artgris/FileManagerBundle",
+            "keywords": [
+                "bundle",
+                "file manager",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/artgris/FileManagerBundle/issues",
+                "source": "https://github.com/artgris/FileManagerBundle/tree/2.10.5"
+            },
+            "time": "2024-03-21T09:48:13+00:00"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^5.3",
+                "symfony/process": "^5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                },
+                "plugin-modifies-install-path": true
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
+                "MODX Evo",
+                "MantisBT",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Starbug",
+                "Thelia",
+                "Whmcs",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "eZ Platform",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "known",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "majima",
+                "mako",
+                "matomo",
+                "mediawiki",
+                "miaoxing",
+                "modulework",
+                "modx",
+                "moodle",
+                "osclass",
+                "pantheon",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "processwire",
+                "puppet",
+                "pxcms",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "sylius",
+                "tastyigniter",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-08-20T06:45:11+00:00"
+        },
         {
             "name": "composer/semver",
             "version": "3.4.0",
@@ -1378,6 +1695,168 @@
             "time": "2023-10-06T06:47:41+00:00"
         },
         {
+            "name": "gregwar/cache",
+            "version": "v1.0.13",
+            "target-dir": "Gregwar/Cache",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Cache.git",
+                "reference": "184cc341c25298ff7d584f86b55b6ca26626da4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/184cc341c25298ff7d584f86b55b6ca26626da4f",
+                "reference": "184cc341c25298ff7d584f86b55b6ca26626da4f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gregwar\\Cache": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gregwar",
+                    "email": "g.passault@gmail.com"
+                }
+            ],
+            "description": "A lightweight file-system cache system",
+            "keywords": [
+                "cache",
+                "caching",
+                "file-system",
+                "system"
+            ],
+            "support": {
+                "issues": "https://github.com/Gregwar/Cache/issues",
+                "source": "https://github.com/Gregwar/Cache/tree/v1.0.13"
+            },
+            "time": "2021-04-20T07:23:58+00:00"
+        },
+        {
+            "name": "gregwar/image",
+            "version": "v2.1.0",
+            "target-dir": "Gregwar/Image",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Image.git",
+                "reference": "1cf64c34cbb22933b36727c16b15ed4d925b6fc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gregwar/Image/zipball/1cf64c34cbb22933b36727c16b15ed4d925b6fc6",
+                "reference": "1cf64c34cbb22933b36727c16b15ed4d925b6fc6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "gregwar/cache": "^1.0.6",
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "sllh/php-cs-fixer-styleci-bridge": "~1.0",
+                "symfony/phpunit-bridge": "^2.7.4 || ^3.0"
+            },
+            "suggest": {
+                "behat/transliterator": "Transliterator provides ability to set non-latin1 pretty names"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gregwar\\Image": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                }
+            ],
+            "description": "Image handling",
+            "homepage": "https://github.com/Gregwar/Image",
+            "keywords": [
+                "gd",
+                "image"
+            ],
+            "support": {
+                "issues": "https://github.com/Gregwar/Image/issues",
+                "source": "https://github.com/Gregwar/Image/tree/v2.1.0"
+            },
+            "time": "2021-02-17T16:00:53+00:00"
+        },
+        {
+            "name": "gregwar/image-bundle",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/ImageBundle.git",
+                "reference": "454d9bf53204f4cdba650c6ec59232205304d2f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gregwar/ImageBundle/zipball/454d9bf53204f4cdba650c6ec59232205304d2f8",
+                "reference": "454d9bf53204f4cdba650c6ec59232205304d2f8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "gregwar/image": "2.*",
+                "php": ">=5.3.3",
+                "symfony/asset": "*",
+                "symfony/framework-bundle": "^2.3 || ^3.0 || ^4.0 || ^5.0 || ^6.0",
+                "twig/twig": "^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "sllh/php-cs-fixer-styleci-bridge": "~1.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gregwar\\ImageBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                }
+            ],
+            "description": "Image handling bundle",
+            "homepage": "https://github.com/Gregwar/ImageBundle",
+            "keywords": [
+                "image",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/Gregwar/ImageBundle/issues",
+                "source": "https://github.com/Gregwar/ImageBundle/tree/v3.0.2"
+            },
+            "time": "2023-02-20T22:14:00+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.6.0",
             "source": {
@@ -1477,6 +1956,63 @@
                 }
             ],
             "time": "2024-04-12T21:02:21+00:00"
+        },
+        {
+            "name": "oomphinc/composer-installers-extender",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oomphinc/composer-installers-extender.git",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "composer/installers": "^1.0 || ^2.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^7.2",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "OomphInc\\ComposerInstallersExtender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "email": "stephen@oomphinc.com",
+                    "homepage": "https://github.com/balbuf"
+                },
+                {
+                    "name": "Nathan Dentzau",
+                    "email": "nate@oomphinc.com",
+                    "homepage": "http://oomph.is/ndentzau"
+                }
+            ],
+            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+            "homepage": "http://www.oomphinc.com/",
+            "support": {
+                "issues": "https://github.com/oomphinc/composer-installers-extender/issues",
+                "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
+            },
+            "time": "2021-12-15T12:32:42+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",

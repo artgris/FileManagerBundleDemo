@@ -14,4 +14,7 @@ return [
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Artgris\Bundle\FileManagerBundle\ArtgrisFileManagerBundle::class => ['all' => true],
+    Arkounay\Bundle\UxCollectionBundle\ArkounayUxCollectionBundle::class => ['all' => true],
+    Arkounay\Bundle\UxMediaBundle\ArkounayUxMediaBundle::class => ['all' => true],
+    Gregwar\ImageBundle\GregwarImageBundle::class => ['all' => true],
 ];
