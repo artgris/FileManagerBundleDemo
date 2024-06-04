@@ -7,12 +7,13 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "arkounay/ux-media": "^4.1",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.12",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.2",
         "gregwar/image-bundle": "^3.0",
+        "league/flysystem-bundle": "^3.3",
+        "league/flysystem-sftp-v3": "^3.28",
         "phpdocumentor/reflection-docblock": "^5.4",
         "phpstan/phpdoc-parser": "^1.29",
         "symfony/asset": "6.4.*",
@@ -40,6 +41,7 @@
         "symfony/string": "6.4.*",
         "symfony/translation": "6.4.*",
         "symfony/twig-bundle": "6.4.*",
+        "symfony/uid": "6.4.*",
         "symfony/ux-turbo": "^2.17",
         "symfony/validator": "6.4.*",
         "symfony/web-link": "6.4.*",
@@ -61,7 +63,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "Artgris\\Bundle\\FileManagerBundle\\": "bundles/filemanager-bundle/"
+            "Artgris\\Bundle\\FileManagerBundle\\": "bundles/filemanager-bundle/src/"
         }
     },
     "autoload-dev": {

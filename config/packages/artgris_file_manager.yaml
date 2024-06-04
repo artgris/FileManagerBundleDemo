@@ -1,4 +1,37 @@
 artgris_file_manager:
-    conf:
+    storage: flysystem
+    mappings:
         default:
-            dir: '%kernel.project_dir%/public/uploads'
+#            view: 'grid'
+            sort_by_type: true
+#            sort_field: size
+#            sort_order: ASC
+            upload_destination: 'default.storage'
+            #            namer: Artgris\Bundle\FileManagerBundle\Naming\UniqueNamer
+            #            namer: Artgris\Bundle\FileManagerBundle\Naming\OriginalNamer
+            #            namer: Artgris\Bundle\FileManagerBundle\Naming\UniqidNamer
+#            namer:
+#                service: Artgris\Bundle\FileManagerBundle\Naming\NormalizeNamer
+#                options:
+#                    format : 'lower'
+#                    timestamp: false
+        private:
+            uri_prefix:  /private
+            upload_destination: 'private.storage'
+        sftp:
+            uri_prefix: "%sftp_prefix%"
+            upload_destination: 'sftp.storage'
+        memory:
+            upload_destination: 'memory.storage'
+
+#artgris_file_manager:
+#    mappings:
+#        default:
+#            upload_destination: '%kernel.project_dir%/public/uploads'
+##            view: 'grid'
+#            sort_by_type: true
+#            sort_field: filename
+#            sort_order: ASC
+#        local:
+#            upload_destination: '%kernel.project_dir%/public/uploads'
+#            uri_prefix: "http://filemanager-bundle-demo.localhost/uploads"

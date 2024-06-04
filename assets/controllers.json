@@ -1,50 +1,5 @@
 {
     "controllers": {
-        "@arkounay/ux-collection": {
-            "collection": {
-                "enabled": true,
-                "fetch": "eager",
-                "autoimport": {
-                    "@arkounay/ux-collection/src/style.css": true,
-                    "@arkounay/ux-collection/src/style-when-not-using-bootstrap-5.css": true
-                }
-            },
-            "tabbed_collection": {
-                "enabled": true,
-                "fetch": "eager",
-                "autoimport": {
-                    "@arkounay/ux-collection/src/tabbed-style.css": true
-                }
-            }
-        },
-        "@arkounay/ux-media": {
-            "media": {
-                "enabled": true,
-                "fetch": "eager",
-                "autoimport": {
-                    "@arkounay/ux-media/src/style.css": true
-                }
-            },
-            "upload": {
-                "enabled": true,
-                "fetch": "eager"
-            },
-            "crop": {
-                "enabled": true,
-                "fetch": "eager",
-                "autoimport": {
-                    "cropperjs/dist/cropper.min.css": true,
-                    "@arkounay/ux-media/src/crop_style.css": true
-                }
-            },
-            "bootstrap_modal": {
-                "enabled": false,
-                "fetch": "eager",
-                "autoimport": {
-                    "@arkounay/ux-media/src/bootstrap_modal.scss": true
-                }
-            }
-        },
         "@symfony/ux-turbo": {
             "turbo-core": {
                 "enabled": false,

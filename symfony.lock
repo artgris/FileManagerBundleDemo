@@ -1,13 +1,4 @@
 {
-    "arkounay/ux-collection": {
-        "version": "4.0.0"
-    },
-    "arkounay/ux-media": {
-        "version": "4.1.2"
-    },
-    "artgris/filemanager-bundle": {
-        "version": "2.10.5"
-    },
     "doctrine/doctrine-bundle": {
         "version": "2.12",
         "recipe": {
@@ -37,6 +28,19 @@
     },
     "gregwar/image-bundle": {
         "version": "v3.0.2"
+    },
+    "league/flysystem-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "913dc3d7a5a1af0d2b044c5ac3a16e2f851d7380"
+        },
+        "files": [
+            "config/packages/flysystem.yaml",
+            "var/storage/.gitignore"
+        ]
     },
     "phpunit/phpunit": {
         "version": "9.6",
@@ -258,6 +262,18 @@
         "files": [
             "config/packages/twig.yaml",
             "templates/base.html.twig"
+        ]
+    },
+    "symfony/uid": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.2",
+            "ref": "d294ad4add3e15d7eb1bae0221588ca89b38e558"
+        },
+        "files": [
+            "config/packages/uid.yaml"
         ]
     },
     "symfony/ux-turbo": {

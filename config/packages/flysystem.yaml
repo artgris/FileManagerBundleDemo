@@ -1,0 +1,23 @@
+# Read the documentation at https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md
+flysystem:
+    storages:
+        default.storage:
+            adapter: 'local'
+            options:
+                directory: '%kernel.project_dir%/public/uploads'
+        private.storage:
+            adapter: 'local'
+            options:
+                directory: '%kernel.project_dir%/private'
+        sftp.storage:
+            adapter: 'sftp'
+            options:
+                host: '%sftp_ip%'
+                port: 22
+                username: '%sftp_username%'
+                password: '%sftp_password%'
+                root: '%sftp_root%'
+                timeout: 30
+                directoryPerm: 0744
+                permPublic: 0700
+                permPrivate: 0744

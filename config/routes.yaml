@@ -4,12 +4,16 @@ controllers:
         namespace: App\Controller
     type: attribute
 
+#artgris_bundle_file_manager:
+#    resource: "@ArtgrisFileManagerBundle/Controller"
+#    type:     attribute
+#    prefix:   /manager
+
 artgris_bundle_file_manager:
-    resource: "@ArtgrisFileManagerBundle/Controller"
-    type:     attribute
-    prefix:   /manager
+    resource: '@ArtgrisFileManagerBundle/config/routes.yaml'
+    prefix: '/manager'
     
-ux_media:
-    resource: "@ArkounayUxMediaBundle/Controller"
-    type: attribute
-    prefix: /ux-media
+#ux_media:
+#    resource: "@ArkounayUxMediaBundle/Controller"
+#    type: attribute
+#    prefix: /ux-media

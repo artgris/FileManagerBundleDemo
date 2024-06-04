@@ -13,8 +13,7 @@ return [
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
-    Artgris\Bundle\FileManagerBundle\ArtgrisFileManagerBundle::class => ['all' => true],
-    Arkounay\Bundle\UxCollectionBundle\ArkounayUxCollectionBundle::class => ['all' => true],
-    Arkounay\Bundle\UxMediaBundle\ArkounayUxMediaBundle::class => ['all' => true],
     Gregwar\ImageBundle\GregwarImageBundle::class => ['all' => true],
+    Artgris\Bundle\FileManagerBundle\ArtgrisFileManagerBundle::class => ['all' => true],
+    League\FlysystemBundle\FlysystemBundle::class => ['all' => true],
 ];
